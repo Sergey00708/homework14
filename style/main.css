@@ -1,0 +1,89 @@
+
+.grid-wrapper {
+    display: grid;
+    text-transform: uppercase;
+    grid-template-areas: 'header menu menu menu'
+                        'hero hero hero hero'
+                        'main main . image'
+                        'main main . extra'
+                        'banner banner banner banner'
+}
+
+.grid-wrapper div {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header, .menu, .hero, .main {
+    color: white;
+}
+
+
+.header {
+    grid-area: header;
+    background-color: #0F1629;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #EF3D4D;
+}
+
+.grid-wrapper .hero {
+    grid-area: hero;
+    background-color: #4C86C6;
+    padding: 70px 0;
+}
+
+.main {
+    grid-area: main;
+    background-color: #24344B;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: #FED169;
+}
+
+.extra {
+    grid-area: extra;
+    background-color: #4DBD97;
+}
+
+.image {
+    grid-area: image;
+    background-color: #C1E4E6;
+}
+
+
+@media (max-width: 1023px) {
+    .grid-wrapper{
+        grid-template-areas: 'header header header header'
+                        'hero hero hero hero'
+                        'menu main main main'
+                        'menu banner banner banner'
+                        'menu extra extra image'
+    }
+
+    .grid-wrapper .menu{
+        padding: 254px 0;
+    }
+
+    .grid-wrapper .main{
+        padding: 110px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-wrapper{
+        display: block;
+    }
+
+    .grid-wrapper .menu{
+        padding: 20px;
+    }
+
+}
+
